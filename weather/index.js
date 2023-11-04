@@ -13,22 +13,6 @@ const fetchWeather = async (searchtext) => {
     } catch (err) {
         return { Error: err.stack };
     }
-    /*
-    //get coords
-    let locate = (spot) => {
-        lat = spot.coords.latitude.toFixed(4);
-        lon = spot.coords.longitude.toFixed(4);
-        weatherURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&APPID=${process.env.WEATHER_API_KEY}`;
-    };
-
-    //when not able to locate
-    let err = () => {
-        alert("Oops... I'm having trouble finding you...")
-    };
-
-    //location call
-    navigator.geolocation.getCurrentPosition(locate, err);
-    */
 }
 
 router.get("/", (req, res) => {
